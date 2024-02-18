@@ -16,7 +16,7 @@ func main() {
 	fmt.Scan(&choice) // number user enters
 
 	if choice == 1 {
-		fmt.Println("Your balance is: ", accountBalance)
+		fmt.Println("Your balance is : ", accountBalance)
 	}
 
 	fmt.Println("Your choice: ", choice)
