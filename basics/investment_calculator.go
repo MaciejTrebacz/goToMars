@@ -5,19 +5,20 @@ import (
 	"math"
 )
 
+const inflationRate = 2.5
+
 func main() {
-	const inflationRate = 2.5      // cannot change
 	var investmentAmount float64   // doesn't have initial value as we getting input from user
 	var expectedReturnRate float64 //we can use short type assignment if we don't need inferred type
 	var years float64
 
-	fmt.Print("Provide investment amount: ")
+	outputText("Provide investment amount")
 	fmt.Scan(&investmentAmount) // pointer
 
-	fmt.Print("Provide years to invest: ")
+	outputText("Provide years to invest: ")
 	fmt.Scan(&years) // pointer
 
-	fmt.Print("Provide return rate: ")
+	outputText("Provide return rate: ")
 	fmt.Scan(&expectedReturnRate) // pointer
 
 	var firstVariable, secondVariable float64 = 1, 2 // we can declare same type variables in one line
@@ -31,4 +32,14 @@ func main() {
 	fmt.Println(futureValue)
 	fmt.Println(futureRealValue)
 
+	receiveAndReturn("1", "2")
+}
+
+func outputText(text string) {
+	fmt.Print(text)
+}
+
+func receiveAndReturn(variable1, variable2 string) (string, string) { // we can return by just writing name of variable like "a string"
+	fmt.Printf(variable1, variable2)
+	return "a", "b"
 }
